@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>Test se project</title>
+      <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <!-- Custom CSS -->
+      <link href="css/style.css" rel="stylesheet">
+      <!-- Custom Fonts -->
+      <link href="font/font-awesome.css" rel="stylesheet" type="text/css">
+      <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+      <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+   </head>
+   <body>
+      <div class="row header">
+         <div class="col-md-3 logo">
+            <a class="navbar-brand" href="home.html">
+            <img alt="Brand" src="image/logo2.png" width="200">
+            </a>
+         </div>
+         <div class="col-md-5">
+            <form class="navbar-form navbar-left" role="search">
+               <input type="text" class="form-control" placeholder="Search for products, shops, brands" size="45">
+               <button type="submit" class="btn btn-primary"><img alt="Brand" src="image/glasses-icon.png" width="18"></button>
+            </form>
+         </div>
+         <div class="welcome col-md-4 btn-log">
+            Hello Username
+            <button type="submit" class="btn btn-outline btn-default" data-toggle="modal" data-target="#exampleModal-profile" data-whatever="signup">My Account</button>
+            <a class="link_seller"href="home.html"><button type="submit" class="btn btn-primary">LOG OUT</button></a>
+         </div>
+      </div>
+      <div class="modal fade" id="exampleModal-profile" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+         <div class="modal-dialog" role="document">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="exampleModalLabel">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MY PROFILE</h4>
+               </div>
+               <div class="modal-body">
+                  <div class="row">
+                     <form action="login.html" method="post" class="form-horizontal">
+                        <b class="h-user">Hello Username<br></b>
+                        <div class="in form-group">
+                           <label for="email" class="col-sm-4 control-label">Email</label>
+                           <div class="col-sm-8">
+                              <input class="space form-control" type="text" id="email" placeholder="Email" disabled>
+                           </div>
+                        </div>
+                        <div class="in form-group">
+                           <label for="user" class="col-sm-4 control-label">Username</label>
+                           <div class="col-sm-8">
+                              <input type="text" class="space form-control" id="user" placeholder="Old username" disabled>
+                           </div>
+                        </div>
+                        <div class="in form-group">
+                           <label for="phone-number" class="col-sm-4 control-label">Phone Number</label>
+                           <div class="col-sm-8">
+                              <input type="text" class="space form-control" id="phone-number" placeholder="Old phone number" required data-validation-required-message="">
+                           </div>
+                        </div>
+                        <div class="in form-group">
+                           <label for="name" class="col-sm-4 control-label">Name</label>
+                           <div class="col-sm-8">
+                              <input type="text" class="space form-control" id="name" placeholder="Name" required data-validation-required-message="">
+                           </div>
+                        </div>
+                        <div class="in form-group">
+                           <label for="address" class="col-sm-4 control-label">Address</label>
+                           <div class="col-sm-8">
+                              <textarea class="space form-control" rows="3" cols="20" id="address" placeholder="Old address"  required data-validation-required-message=""></textarea>
+                           </div>
+                        </div>
+                        <div class="in form-group">
+                           <label for="zipcode" class="col-sm-4 control-label">Zip code</label>
+                           <div class="col-sm-8">
+                              <input type="text" class="space form-control" id="zipcode" placeholder="Old zip code" required data-validation-required-message="">
+                           </div>
+                        </div>
+                  </div>
+               </div>
+               <div class="modal-footer">
+               <input class="edit-user-profile btn btn-primary" type="submit" value="UPDATE" onclick=""/>
+               </form>
+               <a class="" href="login.html"><input class="cancel-user-profile btn btn-danger" type="submit" value="CANCEL" onclick=""/></a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-md-12 menubar">
+            <ul>
+               <a href="login.html" class="btn-menu">
+                  <li>SALE</li>
+               </a>
+               <a href="category_user.html" class="btn-menu">
+                  <li>CATEGORY</li>
+               </a>
+               <a href="#" class="btn-menu">
+                  <li>NEW</li>
+               </a>
+               <a href="#" class="btn-menu">
+                  <li>BRAND</li>
+               </a>
+            </ul>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-xs-12 tab-menu">
+            <a class="sale" href="#">
+            <img alt="Brand" src="image/promotion.jpg" width="800">
+            </a>
+         </div>
+      </div>
+      <br/><br/>
+      <div class="container">
+         <div class="row">
+            <div class="col-sm-3 text-best-price">
+               <a class="" href="#">
+               <img alt="Brand" src="image/text-best-price.png" width="200">
+               </a>
+            </div>
+            <div class="col-xs-9">
+               <div class="col-xs-3">
+                  <a class="product-seller" href="detail_product_user.html">
+                        <img src="image/product.png" class="img-product img-rounded" width="160">
+                        <p class="product_name">Product name: <br>About section: Describe <br>this shop.</p>
+                        <p class="price">200 bath</p>
+                  </a>
+               </div>
+               <div class="col-xs-3">
+                  <a class="product-seller" href="detail_product_user.html">
+                     <img src="image/product.png" class="img-product img-rounded" width="160">
+                     <p class="product_name">Product name: <br>About section: Describe <br>this shop.</p>
+                     <p class="price">200 bath</p>
+                  </a>
+               </div>
+               <div class="col-xs-3">
+                  <a class="product-seller" href="detail_product_user.html">
+                     <img src="image/product.png" class="img-product img-rounded" width="160">
+                     <p class="product_name">Product name: <br>About section: Describe <br>this shop.</p>
+                     <p class="price">200 bath</p>
+                  </a>
+               </div>
+               <div class="col-xs-3">
+                  <a class="product-seller" href="detail_product_user.html">
+                     <img src="image/product.png" class="img-product img-rounded" width="160">
+                     <p class="product_name">Product name: <br>About section: Describe <br>this shop.</p>
+                     <p class="price">200 bath</p>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-xs-12 blank">
+         </div>
+      </div>
+      <div class="container">
+         <div class="row seller">
+            <div class="col-xs-3 text-best-seller">
+               <a class="" href="#">
+               <img alt="Brand" src="image/text-best-seller.png" width="200">
+               </a>
+            </div>
+            <div class="col-xs-9">
+               <div class="col-xs-3">
+                  <a class="product-seller" href="detail_product_user.html">
+                        <img src="image/product.png" class="img-product img-rounded" width="160">
+                        <p class="product_name">Product name: <br>About section: Describe <br>this shop.</p>
+                        <p class="price">200 bath</p>
+                  </a>
+               </div>
+               <div class="col-xs-3">
+                  <a class="product-seller" href="detail_product_user.html">
+                     <img src="image/product.png" class="img-product img-rounded" width="160">
+                     <p class="product_name">Product name: <br>About section: Describe <br>this shop.</p>
+                     <p class="price">200 bath</p>
+                  </a>
+               </div>
+               <div class="col-xs-3">
+                  <a class="product-seller" href="detail_product_user.html">
+                     <img src="image/product.png" class="img-product img-rounded" width="160">
+                     <p class="product_name">Product name: <br>About section: Describe <br>this shop.</p>
+                     <p class="price">200 bath</p>
+                  </a>
+               </div>
+               <div class="col-xs-3">
+                  <a class="product-seller" href="detail_product_user.html">
+                     <img src="image/product.png" class="img-product img-rounded" width="160">
+                     <p class="product_name">Product name: <br>About section: Describe <br>this shop.</p>
+                     <p class="price">200 bath</p>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-xs-2 footer-link"></div>
+         <div class="col-xs-2 footer-link">
+            CUSTOMER CARE<br>
+            Help Center<br>
+            Payment<br>
+            How to Buy<br>
+            Shipping & Delivery<br>
+            International Product Policy<br>
+            How to Return<br>
+            Questions?contact us<br>
+         </div>
+         <div class="col-xs-2 footer-link">
+            About <br>
+            Careers<br>
+            Terms & Conditions<br>
+            Privacy Policy<br>
+            Press & Media<br>
+            All Brands<br>
+            Store Directory<br>
+            Popular Products<br>
+         </div>
+         <div class="col-xs-2 footer-link">
+            About <br>
+            Careers<br>
+            Terms & Conditions<br>
+            Privacy Policy<br>
+            Press & Media<br>
+            All Brands<br>
+            Store Directory<br>
+            Popular Products<br>
+         </div>
+         <div class="col-xs-4 footer-contact">
+            CONTACT US<br>
+            support@bazaar.warehouse.com<br>
+            CALL CENTER 02-2221232<br>
+            OPEN<br>
+            EVERYDAYS 08:30 am - 10:00 pm
+         </div>
+      </div>
+      <!-- jQuery -->
+      <script src="js/jquery.js"></script>
+      <!-- Bootstrap Core JavaScript -->
+      <script src="js/bootstrap.min.js"></script>
+   </body>
+</html>

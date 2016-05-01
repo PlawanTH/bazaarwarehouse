@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Test se project</title>
+		<!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    	<link href="css/bootstrap.min.css" rel="stylesheet">
+    	<!-- Custom CSS -->
+    	<link href="css/style.css" rel="stylesheet">
+		<!-- Custom Fonts -->
+	    <link href="font/font-awesome.css" rel="stylesheet" type="text/css">
+	    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+	    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<div class="row header">
+			<div class="col-md-3 logo">
+				<a class="navbar-brand" href="home.html">
+	        		<img alt="Brand" src="image/logo2.png" width="200">
+	      		</a>
+	      	</div>
+	      	<div class="col-md-6">
+		      	<form class="navbar-form navbar-left" role="search">
+					<input type="text" class="form-control" placeholder="Search for products, shops, brands" size="45">
+					<button type="submit" class="btn btn-primary"><img alt="Brand" src="image/glasses-icon.png" width="18"></button>
+				</form>
+			</div>
+
+			<div class="col-md-3 btn-log">
+				<a class="link_seller"href="seller.html"><button type="submit" class="btn btn-primary" >SELL WITH US</button></a>
+				<button type="submit" class="btn btn-outline btn-default" data-toggle="modal" data-target="#exampleModal-signup" data-whatever="signup">SIGN UP</button>
+				<button type="submit" class="btn btn-outline btn-default" data-toggle="modal" data-target="#exampleModal-login" data-whatever="login">LOGIN</button>
+			</div>
+		</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12 menubar">
+				<ul>
+					<a href="login-seller.html" class="btn-menu"><li>SALE</li></a>
+					<a href="category_seller.html" class="btn-menu"><li>CATEGORY</li></a>
+					<a href="#" class="btn-menu"><li>NEW</li></a>
+					<a href="#" class="btn-menu"><li>BRAND</li></a>
+				</ul>
+           	</div>
+		</div>
+		<br/>
+		<center>
+			<div class="container">
+				<div class="row">
+					<div class="center center_tab">
+						<br>
+						Sign up today<br>
+						to receive a free training<br>
+						to boost your online sales<br>
+						<br>
+						<button id="sell" type="submit" class="btn btn-outline btn-default" data-toggle="modal" data-target="#seller" >SELLER LOGIN</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<a class="link_seller"href="seller_register.html"><button id="sell"type="submit" class="btn btn-outline btn-danger ">BECOME A SELLER</button></a><br>
+						<br>
+						By clicking here you will be taken to our Barzaar warehouse <br>
+						Seller Center registration page.After signing up you will be <br>
+						able to upload your own products to sell on Barzaar warehouse.<br>
+						You can contact our Partner Support throughout the entire <br>
+						process in case you require assistance.<br>
+					</div>
+				</div>
+		</center>
+		<br/>
+		<div class="row">
+			<div class="col-xs-2 footer-link"></div>
+           	<div class="col-xs-2 footer-link">
+				CUSTOMER CARE<br>
+				Help Center<br>
+				Payment<br>
+				How to Buy<br>
+				Shipping & Delivery<br>
+				International Product Policy<br>
+				How to Return<br>
+				Questions?contact us<br>
+           	</div>
+           	<div class="col-xs-2 footer-link">
+				About <br>
+				Careers<br>
+				Terms & Conditions<br>
+				Privacy Policy<br>
+				Press & Media<br>
+				All Brands<br>
+				Store Directory<br>
+				Popular Products<br>
+           	</div>
+           	<div class="col-xs-2 footer-link">
+				About <br>
+				Careers<br>
+				Terms & Conditions<br>
+				Privacy Policy<br>
+				Press & Media<br>
+				All Brands<br>
+				Store Directory<br>
+				Popular Products<br>
+           	</div>
+           	<div class="col-xs-4 footer-contact">
+				CONTACT US<br>
+				support@bazaar.warehouse.com<br>
+				CALL CENTER 02-2221232<br>
+				OPEN<br>
+				EVERYDAYS 08:30 am - 10:00 pm
+           	</div>
+		</div>
+				<div class="modal fade" id="seller" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+		  <div class="modal-dialog modal-sm" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="exampleModalLabel">&nbsp;&nbsp;&nbsp;SELLER LOGIN</h4>
+		      </div>
+		      <div class="modal-body">
+		        <form action="login-seller.html" method="get">
+		          <div class="input-group">
+		          	<span class="log-pic-sell input-group-addon"><img src="image/user_log.png" width="23"></span>
+		            <input type="email" class="form-control" id="login_seller" placeholder="Email" required data-validation-required-message="">
+		          </div>
+		          <br>
+		          <div class="input-group">
+		            <span class="log-pic-sell input-group-addon"><img src="image/lock_log.png" width="23"></span>
+		            <input type="password" class="form-control" id="login_seller" placeholder="Password" required data-validation-required-message="">
+		          </div>
+		      </div>
+		      <div class="modal-footer">
+		        <input class="sell-log btn btn-outline btn-danger" type="submit" value="LOG IN"/>
+		      </div>
+		  </form>
+		    </div>
+		  </div>
+		</div>
+		
+		<div class="modal fade" id="exampleModal-login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+		  <div class="modal-dialog modal-sm" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="exampleModalLabel">&nbsp;&nbsp;&nbsp;&nbsp;LOG IN</h4>
+		      </div>
+		      <div class="modal-body">
+		        <form action="login.html" method="get">
+		          <div class="input-group">
+		          	<span class="log-pic input-group-addon"><img src="image/user_log.png" width="23"></span>
+		            <input type="text" class="form-control" id="login_user" placeholder="Username" required data-validation-required-message="">
+		          </div>
+		          <br>
+		          <div class="input-group">
+		            <span class="log-pic input-group-addon"><img src="image/lock_log.png" width="23"></span>
+		            <input type="password" class="form-control" id="login_pass" placeholder="Password" required data-validation-required-message="">
+		          </div>
+		        
+		      </div>
+		      <div class="modal-footer">
+		        <input class="log btn btn-primary" type="submit" value="LOG IN"/>
+		      </div>
+		  </form>
+		    </div>
+		  </div>
+		</div>
+		<div class="modal fade" id="exampleModal-signup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="exampleModalLabel">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SIGN UP</h4>
+		      </div>
+		      <div class="modal-body">
+		      	<div class="row">
+				    <form action="seller.html" method="post" class="form-horizontal">
+				            <div class="in form-group">
+							    <label for="user" class="col-sm-4 control-label">Username</label>
+							    <div class="col-sm-8">
+							      <input type="text" class="space form-control" id="user" required data-validation-required-message="">
+							    </div>
+							</div>
+							<div class="in form-group">
+							    <label for="email" class="col-sm-4 control-label">Email</label>
+							    <div class="col-sm-8">
+							      <input type="email" class="space form-control" id="email" required data-validation-required-message="">
+							    </div>
+							</div>
+							<div class="in form-group">
+							    <label for="pass" class="col-sm-4 control-label">Password</label>
+							    <div class="col-sm-8">
+							      <input type="pass" class="space form-control" id="pass" required data-validation-required-message="">
+							    </div>
+							</div>
+							<div class="in form-group">
+							    <label for="con-pass" class="col-sm-4 control-label">Confirm Password</label>
+							    <div class="col-sm-8">
+							      <input type="pass" class="space form-control" id="con-pass" required data-validation-required-message="">
+							    </div>
+							</div>
+				    
+				</div>
+		      </div>
+		      <div class="modal-footer">
+		        <input class="sig btn btn-primary" type="submit" value="SIGN UP" onclick=""/>
+		      </div>
+		  </form>
+		    </div>
+		  </div>
+		</div>
+		<!-- jQuery -->
+	    <script src="js/jquery.js"></script>
+	    <!-- Bootstrap Core JavaScript -->
+	    <script src="js/bootstrap.min.js"></script>
+	</body>
+</html>

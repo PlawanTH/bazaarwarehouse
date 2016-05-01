@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>Test se project</title>
+      <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <!-- Custom CSS -->
+      <link href="css/style.css" rel="stylesheet">
+      <!-- Custom Fonts -->
+      <link href="font/font-awesome.css" rel="stylesheet" type="text/css">
+      <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+      <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+	   	<!-- jQuery -->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/jquery.js"></script>
+      <!-- Bootstrap Core JavaScript -->
+      <script src="js/bootstrap.min.js"></script>
+   </head>
+   <body>
+      <div class="row header">
+         <div class="col-md-3 logo">
+            <a class="navbar-brand" href="login-seller.html">
+            <img alt="Brand" src="image/logo2.png" width="200">
+            </a>
+         </div>
+         <div class="col-md-5">
+            <form class="navbar-form navbar-left" role="search">
+               <input type="text" class="form-control" placeholder="Search for products, shops, brands" size="45">
+               <button type="submit" class="btn btn-primary"><img alt="Brand" src="image/glasses-icon.png" width="18"></button>
+            </form>
+         </div>
+         <div class="welcome col-md-4 btn-log">
+            Hello Seller
+            <a class="link_seller"href="profile_shop.html"><button type="submit" class="btn btn-outline btn-default">My Shop</button></a>
+            <a class="link_seller"href="home.html"><button type="submit" class="btn btn-primary">LOG OUT</button></a>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-md-12 menubar">
+            <ul>
+               <a href="login-seller.html" class="btn-menu">
+                  <li>SALE</li>
+               </a>
+               <a href="category_seller.html" class="btn-menu">
+                  <li>CATEGORY</li>
+               </a>
+               <a href="#" class="btn-menu">
+                  <li>NEW</li>
+               </a>
+               <a href="#" class="btn-menu">
+                  <li>BRAND</li>
+               </a>
+            </ul>
+         </div>
+      </div>
+      <br/><br/>
+      
+      <br/>
+      <form action="detail_product.html">
+         <div class="row">
+            <div class="col-xs-3">
+               <div class="logo-seller well">
+                  <img src="image/profile-seller.png" class="img-sell img-circle" width="200">
+                  <h3>Shop name</h3>
+                  <p>About section:Describe this shop. About section:Describe this shop. About section:Describe this shop.About section:Describe this shop.</p>
+                  <button type="submit" class="profile-sell btn btn-outline btn-default" data-toggle="modal" data-target="#exampleModal-profile" data-whatever="signup">Edit</button>
+               </div>
+            </div>
+
+            <div class="modal fade" id="exampleModal-upload-product" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+               <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                     <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="exampleModalLabel">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Upload New Product</h4>
+                     </div>
+                     <div class="modal-body">
+                        <div class="row">
+      						<form action="seller_order.html" method="post" class="form-horizontal">
+      							<div class="in form-group"> 
+							      	<label for="profile-pic" class="col-sm-4 control-label">Product Image</label>
+							      	<div class="col-sm-8">
+							      		<input type="text" class="more space form-control" id="profile-pic" required data-validation-required-message="">
+							      		<button type="" id="profile-pic" class="btn btn-outline btn-default">Browse</button>
+							      	</div>
+						      	</div>
+							    <div class="in form-group">
+							    	<label for="user" class="more col-sm-4 control-label">Product Name</label>
+								    <div class="col-sm-8">
+	      								<input type="text" class="more space form-control" id="user" placeholder="Old Product Name" required data-validation-required-message="">
+	      							</div>
+      							</div>
+      							<div class="in form-group">
+							    	<label for="user" class="more col-sm-4 control-label">Price</label>
+								    <div class="col-sm-8">
+	      								<input type="text" class="more space form-control" id="user" placeholder="Old Price" required data-validation-required-message="">
+	      							</div>
+      							</div>
+      							<div class="in form-group">
+							    	<label for="short" class="more col-sm-4 control-label">Short detail</label>
+								    <div class="col-sm-8">
+	      								<input type="text" class="more space form-control" id="short" placeholder="Old short detail" required data-validation-required-message="">
+	      							</div>
+      							</div>
+							    <div class="in form-group">
+								    <label for="pass" class="more col-sm-4 control-label">Product detail</label>
+								    <div class="col-sm-8">
+								    	<textarea class="more space form-control" rows="3" cols="20" id="address" placeholder="Old Product detail"  required data-validation-required-message=""></textarea>
+								    </div>
+							    </div>
+      						</div>
+      					</div>
+      					<div class="modal-footer">
+      						<input class="edit-user-profile btn btn-primary" type="submit" value="DONE" onclick=""/>
+      						</form>
+     						 <a class="" href="seller_order.html"><button type="button" class="cancel-user-profile btn btn-danger">CANCEL</button></a>
+      					</div>
+      				</div>
+      			</div>
+      		</div>
+      		<div class="modal fade" id="exampleModal-profile" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+               <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                     <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="exampleModalLabel">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SHOP PROFILE</h4>
+                     </div>
+                     <div class="modal-body">
+                        <div class="row">
+      						<form action="seller_order.html" method="post" class="form-horizontal">
+      							<div class="in form-group"> 
+							      	<label for="profile-pic" class="col-sm-4 control-label">Profile Picture</label>
+							      	<div class="col-sm-8">
+							      		<input type="text" class="more space form-control" id="profile-pic" required data-validation-required-message="">
+							      		<button type="" id="profile-pic" class="btn btn-outline btn-default">Browse</button>
+							      	</div>
+						      	</div>
+							    <div class="in form-group">
+							    	<label for="user" class="more col-sm-4 control-label">Shop Name</label>
+								    <div class="col-sm-8">
+	      								<input type="text" class="more space form-control" id="user" placeholder="Old Shop Name" required data-validation-required-message="">
+	      							</div>
+      							</div>
+							    <div class="in form-group">
+								    <label for="pass" class="more col-sm-4 control-label">About</label>
+								    <div class="col-sm-8">
+								    	<textarea class="more space form-control" rows="3" cols="20" id="address" placeholder="Old about"  required data-validation-required-message=""></textarea>
+								    </div>
+							    </div>
+							    <div class="in form-group"> 
+							    	<label for="product-type" class="more col-sm-4 control-label">Product Type</label>
+							    	<div class="col-sm-8">
+							    		<div class="more checkbox">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" value="Type">Type1
+							    		</div>
+								    	<div class="checkbox">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" value="Type">Type2
+	      								</div>
+									    <div class="checkbox">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" value="Type">Type3
+									    </div>
+									    <div class="checkbox">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" value="Type">Type4
+									    </div>
+									    <div class="checkbox">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" value="Type">Type5
+									    </div>
+									    <div class="checkbox">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" value="Type">Type6
+									    </div>
+      								</div>
+      							</div>
+      						</div>
+      					</div>
+      					<div class="modal-footer">
+      						<input class="edit-user-profile btn btn-primary" type="submit" value="UPDATE" onclick=""/>
+      						</form>
+     						 <a class="" href="seller_order.html"><button type="button" class="cancel-user-profile btn btn-danger">CANCEL</button></a>
+      					</div>
+      				</div>
+      			</div>
+      		</div>
+      		<div class="col-xs-9">
+      			<div class="col-xs-12">
+
+      				<div class="order-seller">
+                     <div class="col-xs-3">
+			      		    <img src="image/product.png" class="img-product img-rounded" width="160">
+                     </div>
+                     <div class="detail-adderss col-xs-6">
+                        Address:
+                     </div>
+                     <div class="sum col-xs-3">
+                        ToTal Price : 400 Bath<br>
+                        Amount : 2<br>
+                        Balance : 20<br>
+                        <button type="button" class="finish btn btn-danger">FINISH</button>
+                     </div>
+      				</div>
+	      		</div>
+		      	<div class="col-xs-12">
+                  <div class="order-seller">
+                     <div class="col-xs-3">
+                         <img src="image/product.png" class="img-product img-rounded" width="160">
+                     </div>
+                     <div class="detail-adderss col-xs-6">
+                        Address:
+                     </div>
+                     <div class="sum col-xs-3">
+                        ToTal Price : 400 Bath<br>
+                        Amount : 2<br>
+                        Balance : 20<br>
+                        <button type="button" class="finish btn btn-danger">FINISH</button>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xs-12">
+                  <div class="order-seller">
+                     <div class="col-xs-3">
+                         <img src="image/product.png" class="img-product img-rounded" width="160">
+                     </div>
+                     <div class="detail-adderss col-xs-6">
+                        Address:
+                     </div>
+                     <div class="sum col-xs-3">
+                        ToTal Price : 400 Bath<br>
+                        Amount : 2<br>
+                        Balance : 20<br>
+                        <button type="button" class="finish btn btn-danger">FINISH</button>
+                     </div>
+                  </div>
+               </div>
+	      	</div>
+            <div class="col-xs-12">
+               <b><h2 class="total" style="float: right">TOTAL : 20,000</h2></b>
+            </div><br>
+      
+      <br/>
+
+      <div class="row">
+         <div class="col-xs-2 footer-link"></div>
+         <div class="col-xs-2 footer-link">
+            CUSTOMER CARE<br>
+            Help Center<br>
+            Payment<br>
+            How to Buy<br>
+            Shipping & Delivery<br>
+            International Product Policy<br>
+            How to Return<br>
+            Questions?contact us<br>
+         </div>
+         <div class="col-xs-2 footer-link">
+            About <br>
+            Careers<br>
+            Terms & Conditions<br>
+            Privacy Policy<br>
+            Press & Media<br>
+            All Brands<br>
+            Store Directory<br>
+            Popular Products<br>
+         </div>
+         <div class="col-xs-2 footer-link">
+            About <br>
+            Careers<br>
+            Terms & Conditions<br>
+            Privacy Policy<br>
+            Press & Media<br>
+            All Brands<br>
+            Store Directory<br>
+            Popular Products<br>
+         </div>
+         <div class="col-xs-4 footer-contact">
+            CONTACT US<br>
+            support@bazaar.warehouse.com<br>
+            CALL CENTER 02-2221232<br>
+            OPEN<br>
+            EVERYDAYS 08:30 am - 10:00 pm
+         </div>
+      </div>
+      
+   </body>
+</html>

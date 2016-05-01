@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>Test se project</title>
+      <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <!-- Custom CSS -->
+      <link href="css/style.css" rel="stylesheet">
+      <!-- Custom Fonts -->
+      <link href="font/font-awesome.css" rel="stylesheet" type="text/css">
+      <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+      <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+         <!-- jQuery -->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/jquery.js"></script>
+      <!-- Bootstrap Core JavaScript -->
+      <script src="js/bootstrap.min.js"></script>
+   </head>
+   <body>
+      <div class="row header">
+         <div class="col-md-3 logo">
+            <a class="navbar-brand" href="home.html">
+            <img alt="Brand" src="image/logo2.png" width="200">
+            </a>
+         </div>
+         <div class="col-md-5">
+            <form class="navbar-form navbar-left" role="search">
+               <input type="text" class="form-control" placeholder="Search for products, shops, brands" size="45">
+               <button type="submit" class="btn btn-primary"><img alt="Brand" src="image/glasses-icon.png" width="18"></button>
+            </form>
+         </div>
+         <div class="col-md-3 btn-log">
+            <a class="link_seller"href="seller.html"><button type="submit" class="btn btn-primary" >SELL WITH US</button></a>
+            <button type="submit" class="btn btn-outline btn-default" data-toggle="modal" data-target="#exampleModal-signup" data-whatever="signup">SIGN UP</button>
+            <button type="submit" class="btn btn-outline btn-default" data-toggle="modal" data-target="#exampleModal-login" data-whatever="login">LOGIN</button>
+         </div>
+      </div>
+      <div class="modal fade" id="exampleModal-login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+         <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="exampleModalLabel">&nbsp;&nbsp;&nbsp;&nbsp;LOG IN</h4>
+               </div>
+               <div class="modal-body">
+                  <form action="detail_product_user.html" method="get">
+                     <div class="input-group">
+                        <span class="log-pic input-group-addon"><img src="image/user_log.png" width="23"></span>
+                        <input type="text" class="form-control" id="login_user" placeholder="Username" required data-validation-required-message="Please Enter Username">
+                     </div>
+                     <br>
+                     <div class="input-group">
+                        <span class="log-pic input-group-addon"><img src="image/lock_log.png" width="23"></span>
+                        <input type="password" class="form-control" id="login_pass" placeholder="Password" required data-validation-required-message="">
+                     </div>
+               </div>
+               <div class="modal-footer">
+               <input class="log btn btn-primary" type="submit" value="LOG IN"/>
+               </div>
+               </form>
+            </div>
+         </div>
+      </div>
+      <div class="modal fade" id="exampleModal-signup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+         <div class="modal-dialog" role="document">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="exampleModalLabel">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SIGN UP</h4>
+               </div>
+               <div class="modal-body">
+                  <div class="row">
+                     <form action="detail_product_not.html" method="post" class="form-horizontal">
+                        <div class="in more form-group">
+                           <label for="user" class="col-sm-4 control-label">Username</label>
+                           <div class="col-sm-8">
+                              <input type="text" class="space form-control" id="user" required data-validation-required-message="">
+                           </div>
+                        </div>
+                        <div class="in more form-group">
+                           <label for="email" class="col-sm-4 control-label">Email</label>
+                           <div class="col-sm-8">
+                              <input type="email" class="space form-control" id="email" required data-validation-required-message="">
+                           </div>
+                        </div>
+                        <div class="in more form-group">
+                           <label for="pass" class="col-sm-4 control-label">Password</label>
+                           <div class="col-sm-8">
+                              <input type="password" class="space form-control" id="pass" required data-validation-required-message="">
+                           </div>
+                        </div>
+                        <div class="in more form-group">
+                           <label for="con-pass" class="col-sm-4 control-label">Confirm Password</label>
+                           <div class="col-sm-8">
+                              <input type="password" class="space form-control" id="con-pass" required data-validation-required-message="">
+                           </div>
+                        </div>
+                  </div>
+               </div>
+               <div class="modal-footer">
+               <input class="sig btn btn-primary" type="submit" value="SIGN UP" onclick=""/>
+               </div>
+               </form>
+            </div>
+         </div>
+      </div>
+      
+      <div class="row">
+         <div class="col-md-12 menubar">
+            <ul>
+               <a href="home.html" class="btn-menu">
+                  <li>SALE</li>
+               </a>
+               <a href="category.html" class="btn-menu">
+                  <li>CATEGORY</li>
+               </a>
+               <a href="#" class="btn-menu">
+                  <li>NEW</li>
+               </a>
+               <a href="#" class="btn-menu">
+                  <li>BRAND</li>
+               </a>
+            </ul>
+         </div>
+      </div>
+      <br/><br/>
+         <div class="row">
+         <div class="detail col-md-12">
+            <div class="tab-logo">
+               <div class="col-md-2">
+               <img src="image/profile-seller.png" class="img-circle" width="70">
+               </div>
+               <div class="col-md-10">
+               <p>Shop name</p>
+               <p class="info">About section: Describe this shop. About section: Describe this shop.</p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <br>
+      <div class="row">
+         <div class="col-md-4">
+               <div class="product-detail">
+               <img src="image/product.png" class="img-product img-rounded" width="300">
+            </div>
+         </div>
+         <div class="col-md-5">
+               <div class="product-detail">
+               <h3><b>Shop name</b></h3>
+               <h2 class="product-price"><b>90,000 Bath</b></h2>
+               Amount<br><br>
+               <input type="number" class="form-control" min="0" value="1" style="width:100px;"><br>
+               <button type="submit" class="buybtn btn btn-danger" data-toggle="modal" data-target="#exampleModal-product" data-whatever="product">BUY</button><br><br>
+               <p>Short Detail: กล้อง nikon D810 ดีไซน์ใหม่หมดจดเพื่อคุณภาพของภาพขั้นสุดยอด ฉากที่น่าทึ่งต้องการอุปกรณ์ถ่ายภาพที่น่าทึ่ง</p>
+            </div>
+         </div>
+         <div class="col-md-9 product-detail">
+            <br>
+            <p>Product name : Nikon D810 ประกันEC-Mall Kit 24-120 Vr ราคา 97,900.00 บาท<br>
+               กล้อง nikon D810 ดีไซน์ใหม่หมดจดเพื่อคุณภาพของภาพขั้นสุดยอด ฉากที่น่าทึ่งต้องการอุปกรณ์ถ่ายภาพที่น่าทึ่ง พื้นผิวที่ละเอียดอ่อน รายละเอียดที่พิถีพิถัน สีสันสวยสะกดใจ ทุกอย่างนี้รวมอยู่ในกล้อง D810 ที่มาพร้อมความแม่นยำที่เหนือชั้น นี่คือกล้อง Nikon ที่เกิดจากความมุ่งมั่นในการใช้เทคโนโลยีด้านการถ่ายภาพที่ล้ำสมัยเพื่อให้ได้คุณภาพของภาพอย่างที่คุณไม่เคยเห็นมาก่อน คุณภาพของภาพที่ล้ำหน้ากว่ากล้อง D800/D800E ซึ่งถือเป็นมาตรฐานใหม่ของความเป็นเลิศด้านการถ่ายภาพ คุณสมบัติเด่น  เซ็นเซอร์ภาพ CMOS รูปแบบ FX ใหม่จาก Nikon ให้ภาพที่คมชัดน่าทึ่งด้วยจำนวนพิกเซลใช้งานจริง 36.3 ล้านพิกเซลพร้อมช่วงไดนามิกกว้างตั้งแต่มาตรฐาน ISO 64 ถึง 12800  ระบบประมวลผลภาพ EXPEED 4 ทำให้ได้ภาพความละเอียดสูงที่มีความคมชัดมากขึ้น สีส่วนรวมที่สมบูรณ์ การปรับปรุงคุณภาพสีที่แม่นยำ และสัญญาณรบกวนที่มีการควบคุมอย่างพิถีพิถันสำหรับทุกค่าความไวแสง (ISO)  ระบบ Picture Control แบบใหม่ได้เพิ่มตัวเลือก Flat การตั้งค่าความชัด และการปรับพารามิเตอร์ในขั้นที่ละเอียดยิ่งขึ้นเพื่อการควบคุมภาพถ่ายอย่างครบถ้วน<br><br>
+
+               Specification<br>
+               ความละเอียดภาพสูงสุด (Max Resolution)  7360 x 4912<br>
+               สัดส่วนภาพ (Image Ratio)   3:2<br>
+               พิกเซล (Effective Pixels)  37.09 Megapixel<br>
+               เซลล์รับภาพ (Image Sensor) Full-Frame (1.0x Crop Factor) CMOS, 35.9 x 24.0 mm<br>
+               ความไวแสง (ISO Rating)  Auto, 64-12800 (High Sensitivity Mode: 32-51200)<br>
+               Optical Zoom   n/a<br>
+               Digital Zoom   n/a<br>
+               ระบบป้องกันภาพสั่น (Image Stabilization)  n/a<br>
+               ระบบโฟกัส (Auto Focus Type)   n/a<br>
+            </p>
+         </div>
+      </div>
+      <div class="modal fade" id="exampleModal-product" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+         <div class="modal-dialog" role="document">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="exampleModalLabel">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MY ORDER</h4>
+               </div>
+               <div class="modal-body">
+                  <div class="row">
+                     <form action="ldetail_product_not.html" method="post" class="form-horizontal">
+                        <div class="product-detail">
+                           <img src="image/product.png" class="img-product img-rounded" width="100">
+                        </div><br>
+                        <div class="in form-group">
+                           <label for="email" class="col-sm-4 control-label">Product</label>
+                           <div class="col-sm-8">
+                              <input class="space form-control" type="text" id="product" placeholder="Name product" disabled>
+                           </div>
+                        </div>
+                        <div class="in form-group">
+                           <label for="email" class="col-sm-4 control-label">Amount</label>
+                           <div class="col-sm-8">
+                              <input class="space form-control" type="text" id="amount" placeholder="1" disabled>
+                           </div>
+                        </div>
+                        <b class="h-user">Shipping contact<br></b>
+                        <div class="in form-group">
+                           <label for="email" class="col-sm-4 control-label">Name</label>
+                           <div class="col-sm-8">
+                              <input class="space form-control" type="text" id="name" placeholder="Name for shipping" required data-validation-required-message="">
+                           </div>
+                        </div>
+                        <div class="in form-group">
+                           <label for="address" class="col-sm-4 control-label">Address</label>
+                           <div class="col-sm-8">
+                              <textarea class="space form-control" rows="3" cols="20" id="address" placeholder="Old address"  required data-validation-required-message=""></textarea>
+                           </div>
+                        </div>
+                        <div class="in form-group">
+                           <label for="zipcode" class="col-sm-4 control-label">Zip code</label>
+                           <div class="col-sm-8">
+                              <input type="text" class="space form-control" id="zipcode" placeholder="Old zip code" required data-validation-required-message="">
+                           </div>
+                        </div>
+                        <div class="in form-group">
+                           <label for="email" class="col-sm-4 control-label">Phone Number</label>
+                           <div class="col-sm-8">
+                              <input class="space form-control" type="text" id="phone" placeholder="Phone number" required data-validation-required-message="">
+                           </div>
+                        </div>
+                  </div>
+               </div>
+               <div class="modal-footer">
+               <input class="edit-user-profile btn btn-primary" type="submit" value="DONE" onclick=""/>
+               </form>
+               <a class="" href="detail_product_not.html"><input class="cancel-user-profile btn btn-danger" type="submit" value="CANCEL" onclick=""/></a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <br/>
+
+      <div class="row">
+         <div class="col-xs-2 footer-link"></div>
+         <div class="col-xs-2 footer-link">
+            CUSTOMER CARE<br>
+            Help Center<br>
+            Payment<br>
+            How to Buy<br>
+            Shipping & Delivery<br>
+            International Product Policy<br>
+            How to Return<br>
+            Questions?contact us<br>
+         </div>
+         <div class="col-xs-2 footer-link">
+            About <br>
+            Careers<br>
+            Terms & Conditions<br>
+            Privacy Policy<br>
+            Press & Media<br>
+            All Brands<br>
+            Store Directory<br>
+            Popular Products<br>
+         </div>
+         <div class="col-xs-2 footer-link">
+            About <br>
+            Careers<br>
+            Terms & Conditions<br>
+            Privacy Policy<br>
+            Press & Media<br>
+            All Brands<br>
+            Store Directory<br>
+            Popular Products<br>
+         </div>
+         <div class="col-xs-4 footer-contact">
+            CONTACT US<br>
+            support@bazaar.warehouse.com<br>
+            CALL CENTER 02-2221232<br>
+            OPEN<br>
+            EVERYDAYS 08:30 am - 10:00 pm
+         </div>
+      </div>
+      
+   </body>
+</html>

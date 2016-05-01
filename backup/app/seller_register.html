@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Test se project</title>
+		<!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    	<link href="css/bootstrap.min.css" rel="stylesheet">
+    	<!-- Custom CSS -->
+		<!-- Custom Fonts -->
+	    <link href="font/font-awesome.css" rel="stylesheet" type="text/css">
+	    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+	    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+	</head>
+	<style>
+		body{ /*background full size*/
+			font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+            background: url(image/SE-seller-reg.jpg) no-repeat center center fixed; 
+        }
+        .banner{
+			text-align: center;
+			margin-bottom: 50px;
+			display: block;
+		}
+		.regis{
+			background-color: white;
+			padding: 20px;
+			width: 800px;
+			text-align:left;
+		}
+		p.small{
+			font-size: 10px;
+			color: #bebebe;
+		}
+		h2{
+			font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+		}
+		.reg{
+			margin-left: 310px;
+			width: 150px;
+			height: 50px;
+		}
+		
+	</style>
+	<body>
+			<div class="banner">
+	        	<center><img alt="Brand" src="image/banner.png" width="800" ></center>
+           	</div>
+			<center>
+			<div class="container">
+			<div class="regis">
+           		<form action="home.html" method="post">
+					<div class="row">
+           			<h2>Sign-up to Become A Seller on Bazaar warehouse</h2>
+           			<div class="col-lg-6">
+	           			First Name *<br>
+						<input type="text" class="form-control " required data-validation-required-message="" size="35"><br>
+						Email *<br>
+						<input type="text" class="form-control" required data-validation-required-message="" size="35">
+						<p class="small">Please enter your Email address above (as used on the Sign-up Form)</p>
+						Company Name (or Shop name) *<br>
+						<input type="text" class="form-control" required data-validation-required-message="" size="35">
+						<p class="small">Please enter your company name above</p>
+						Address *<br>
+						<textarea class="form-control" rows="3" cols="35" required data-validation-required-message=""></textarea>
+						<p class="small">Please enter your address above</p>
+						City *<br>
+						<input type="text" class="form-control" required data-validation-required-message="" size="35"><br>
+						Postal Code *<br>
+						<input type="text" class="form-control" required data-validation-required-message="" size="35"><br>
+						Product Category *<br>
+						<select class="form-control" required data-validation-required-message="" >
+							<option>Student</option>
+							<option>Teacher</option>
+							<option>Student</option>
+							<option>Teacher</option>
+						</select>
+						<p class="small">Please select your primary product category</p>
+						Business Type<br>
+						<select class="form-control">
+							<option>Student</option>
+							<option>Teacher</option>
+							<option>Student</option>
+							<option>Teacher</option>
+						</select><br>
+						Business Registration Number<br>
+						<input type="text" class="form-control" size="35"><br>
+						
+						<input class="reg btn btn-success" type="submit" value="Register" onclick=""/>
+					</div>
+					<div class="col-lg-6">
+	           			Last Name *<br>
+						<input type="text" class="form-control" required data-validation-required-message="" size="35"><br>
+						Phone Number *<br>
+						<input type="text" class="form-control" required data-validation-required-message="" size="35">
+						<p class="small">Please enter your phone number above</p>
+					</div>
+				</div>
+				</form>
+			</div>
+		</div>
+		</center>
+		<!-- jQuery -->
+	    <script src="js/jquery.js"></script>
+	    <!-- Bootstrap Core JavaScript -->
+	    <script src="js/bootstrap.min.js"></script>
+	</body>
+</html>
