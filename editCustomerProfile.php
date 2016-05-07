@@ -11,10 +11,31 @@
 ?>
 
 <html>
+    
+    <head>
+
+        <?php 
+        include("htmlheader.php");
+        ?>
+        
+    </head>
 
     <body>
+        <div class="container-fluid">
         
         <?php
+        
+            $login = "";
+
+            if(isset($_SESSION["user"])){
+                $login = "LOG OUT";
+            }
+            else {
+                $login = "LOG IN";
+            }
+        
+            include("menuheader.php");
+            //include("modal.php");
         
             // connect to db
             $conn = mysql_connect("localhost", "root", "");
@@ -49,19 +70,24 @@
             mysql_close($conn);
         
         ?>
-        
-        <form method="post">
-            Firstname: <input type="text" name="firstname" maxlength="25" value="<?php echo $firstname ?>" required /><br/>
-            Lastname: <input type="text" name="lastname" maxlength="25" value="<?php echo $lastname ?>" required  /><br/>
-            Address: <textarea name="address" maxlength="255" required><?php echo $address ?></textarea><br/>
-            E-mail: <input type="email" name="email" required value="<?php echo $email ?>" /><br/>
-            Phone Number: <input type="tel" name="tel" maxlength="10" value="<?php echo $phone ?>" /><br/>
-            <input type="submit" name="submit" /><br/>
-        </form>
+        <div class="container">
+            <div class="row" style="padding: 50px;">
+                <h1>Edit Profile</h1>
+                <hr/>
+                <form method="post">
+                    Firstname: <input type="text" name="firstname" maxlength="25" value="<?php echo $firstname ?>" required /><br/><br/>
+                    Lastname: <input type="text" name="lastname" maxlength="25" value="<?php echo $lastname ?>" required  /><br/><br/>
+                    Address: <textarea name="address" maxlength="255" required><?php echo $address ?></textarea><br/><br/>
+                    E-mail: <input type="email" name="email" required value="<?php echo $email ?>" /><br/><br/>
+                    Phone Number: <input type="tel" name="tel" maxlength="10" value="<?php echo $phone ?>" /><br/><br/>
+                    <input type="submit" name="editSubmit" /><br/>
+                </form>
+            </div>
+        </div>
         
         <?php
         
-            if(isset($_POST["submit"])){
+            if(isset($_POST["editSubmit"])){
                 if(!empty($_POST)){
                     foreach($_POST as $value){
                         if(empty($value)){
@@ -103,9 +129,13 @@
                 mysql_close($conn);
                 
 
-                header("Refresh:0, URL=editCustomerProfile.php"); // link to customer detail
+                header("Refresh:0, URL=customerProfile.php"); // link to customer detail
             }
         ?>
+        
+        
+        <?php include("footer.php"); ?>
+            </div>
     
     </body>
 

@@ -30,7 +30,7 @@
             <div class="col-md-3 btn-log col-md-offset-6">
                 <?php echo $welcome; ?>
              
-             <a href="editCustomerProfile.php" class="btn btn-outline btn-default">Profile</a>
+             <a href="customerProfile.php" class="btn btn-outline btn-default">Profile</a>
              
              <a href="logout.php" class="btn btn-outline btn-default" >LOG OUT</a>
              

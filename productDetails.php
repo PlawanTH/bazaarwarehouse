@@ -89,7 +89,7 @@
                     <form method="post" action="order.php">
                         <input type="hidden" name="prodID" value="<?php echo $prodID; ?>" />
 					   <input type="number" class="form-control" min="1" value="1" style="width:100px;" name="amount" required><br>
-					   <button type="submit" class="buybtn btn btn-danger" data-toggle="modal" data-target="#exampleModal-product" data-whatever="product" name="submit" <?php if($amount == 0) echo "disabled" ?>>BUY</button>
+					   <button type="submit" class="buybtn btn btn-danger" data-toggle="modal" data-target="#exampleModal-product" data-whatever="product" name="submitBuy" <?php if($amount == 0) echo "disabled" ?>>BUY</button>
                     </form>
                     <?php endif; ?>
                     <br>

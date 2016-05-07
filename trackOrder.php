@@ -1,14 +1,4 @@
-<?php
 
-    session_start();
-    if(!isset($_SESSION["custID"])){
-        header("Location: index.php");
-        exit;
-    }
-
-?>
-<html>
-    
     <form method="post">
         <select name="status">
             <option value="Incomplete">No Comlete</option>
@@ -52,11 +42,11 @@
             $sql .= " AND (status = 'Ordering' OR status = 'Ready')";
         }
             
-        $sql .= " ORDER BY orderID";
+        $sql .= " ORDER BY orderID desc";
         $result = mysql_query($sql);
 
         if(mysql_num_rows($result) > 0){
-            echo "<table>";
+            echo "<table class='table table-hover'>";
             echo "<tr>";
             echo "<td>No.</td><td>Product Name</td><td>Amount</td><td>Price</td><td>Order Date</td><td>Order Status</td>";
             echo "</tr>";
@@ -82,4 +72,3 @@
 
     ?>
     
-</html>

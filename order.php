@@ -11,7 +11,7 @@
 
     $amount = $price = "";
 
-    if(isset($_POST["submit"]) && !empty($_POST["amount"])){
+    if(isset($_POST["submitBuy"]) && !empty($_POST["amount"])){
 
         $conn = mysql_connect("localhost", "root", "");
         if(!$conn){
@@ -52,7 +52,7 @@
         if($result = mysql_query($sql)){
             $sql = "UPDATE Product SET Amount = ".($amount-$_POST["amount"])." WHERE ProductID = ".$_POST["prodID"]; 
             if($result = mysql_query($sql)){
-                echo "<script>alert('Order Success.\nYou can track order status on track order page.')</script>";
+                echo "<script>alert('Order Success. You can track your order status on your profile page.')</script>";
             } else {
                 die("Something went wrong. Error:".mysql_error());
             }
