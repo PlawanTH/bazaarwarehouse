@@ -1,8 +1,9 @@
 <?php
 
-    echo "<table>";
-
-    echo "<tr><td>Product Name</td><td>Product Detial</td><td>Amount</td><td>Price</td></tr>";
+    echo "<table class='table table-hover'>";
+    echo "<thead>";
+    echo "<tr><th>Product Name</th><th>Product Detial</th><th>Category</th><th>Amount</th><th>Price</th><th></th><th></th></tr>";
+    echo "</thead>";
     
     $conn = mysql_connect("localhost", "root", "");
 

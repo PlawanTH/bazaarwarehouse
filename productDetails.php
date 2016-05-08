@@ -95,10 +95,10 @@
                     <br>
                     <?php if($amount == 0){ echo "<span style='color:red'>* สินค้าหมดชั่วคราว</span><br/>"; }?>
                     <br>
-					<p>Short Detail: <?php echo $productDetail; ?></p><br/>
+					<p>Short Detail: <?php echo $productDetail; ?></p<br/>
                     
                     <?php if(isset($_SESSION["sellerID"])): ?>
-                    <?php echo "Product Amount: ".$amount ; ?><br/>
+                    <h3><?php echo "Product Amount: ".$amount ; ?></h3><br/>
             <a class="btn btn-primary" style="font-size:1.4em;" href="editProduct.php?prodID=<?php echo $prodID; ?>">Edit Product Detail</a>
                     <?php endif ?>
 				</div>
