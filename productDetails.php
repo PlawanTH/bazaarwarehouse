@@ -51,6 +51,10 @@
         
         mysql_select_db("csc321");
         
+        // set character set results ////////
+        $cs1 = "SET character_set_results=utf8";
+mysql_query($cs1) or die('Error query: ' . mysql_error());
+        
         $sql = "SELECT * FROM Product WHERE ProductID = ".$prodID;
         $result = mysql_query($sql);
         
@@ -86,7 +90,7 @@
 					<h2 class="product-price"><b><?php echo $price ?> Bath</b></h2>
                     <?php if(!isset($_SESSION["sellerID"])): ?>
 					Amount<br><br>
-                    <form method="post" action="order.php">
+                    <form method="post" action="order.php" onsubmit="return confirm('Do you sure to buy this product?');">
                         <input type="hidden" name="prodID" value="<?php echo $prodID; ?>" />
 					   <input type="number" class="form-control" min="1" value="1" style="width:100px;" name="amount" required><br>
 					   <button type="submit" class="buybtn btn btn-danger" data-toggle="modal" data-target="#exampleModal-product" data-whatever="product" name="submitBuy" <?php if($amount == 0) echo "disabled" ?>>BUY</button>
@@ -105,7 +109,7 @@
 			</div>
 			<div class="col-md-9 product-detail">
 				<br>
-				<p>Product name : <?php echo $productName; ?><br>
+				<p>Product Name : <?php echo $productName; ?><br>
                     Product Detail : <?php echo $productDetail; ?><br/>
                     Category : <?php echo $category; ?><br/>
 				</p>

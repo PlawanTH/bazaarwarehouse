@@ -8,6 +8,43 @@ if(!isset($_SESSION["sellerID"])){
 
 ?>
 
+
+
+<?php
+
+if(isset($_POST["submit"])){
+    // connect to db
+    $conn = mysql_connect("localhost", "root", "");
+
+    if(!$conn){
+        die("Connection failed: ". mysql_error());
+    }
+    // select db
+    mysql_select_db("csc321");
+                
+
+    // create sql query string
+    $sql = "UPDATE `Order`"
+        ." SET status = '".$_POST["status"]."'"
+        ." WHERE orderID = ".$_POST["orderID"];
+                
+    if($result = mysql_query($sql)){
+         header("Refresh:0, URL=updateOrderStatus.php");
+        echo "<script>alert('Update Status Success.')</script>";
+    } else {
+        header("Refresh:0, URL=updateOrderStatus.php"); 
+        echo "<script>alert('Something went wrong. Try again.')</script>";
+        die("Error: ". mysql_error());
+        exit;
+    }
+
+    mysql_close($conn);
+                
+
+}
+
+?>
+
 <html>
     
     <form method="post">
@@ -107,38 +144,3 @@ if(!isset($_SESSION["sellerID"])){
     ?>
 
 </html>
-
-<?php
-
-if(isset($_POST["submit"])){
-    // connect to db
-    $conn = mysql_connect("localhost", "root", "");
-
-    if(!$conn){
-        die("Connection failed: ". mysql_error());
-    }
-    // select db
-    mysql_select_db("csc321");
-                
-
-    // create sql query string
-    $sql = "UPDATE `Order`"
-        ." SET status = '".$_POST["status"]."'"
-        ." WHERE orderID = ".$_POST["orderID"];
-                
-    if($result = mysql_query($sql)){
-        echo "<script>alert('Update Status Success.')</script>";
-    } else {
-        echo "<script>alert('Something went wrong. Try again.')</script>";
-        die("Error: ". mysql_error());
-        header("Refresh:0, URL=updateOrderStatus.php"); 
-        exit;
-    }
-
-    mysql_close($conn);
-                
-
-    header("Refresh:0, URL=updateOrderStatus.php");
-}
-
-?>

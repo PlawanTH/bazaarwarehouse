@@ -13,6 +13,10 @@
 
     mysql_select_db("csc321");
 
+// set character set results ////////
+        $cs1 = "SET character_set_results=utf8";
+mysql_query($cs1) or die('Error query: ' . mysql_error());
+
     $sql = "SELECT * FROM Product";
 
     if(isset($_POST["submit"])){
